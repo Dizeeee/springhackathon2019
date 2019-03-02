@@ -58,8 +58,8 @@ func root(w http.ResponseWriter, r *http.Request) error {
 	w.Header().Set("Content-type", "text/html; charset=utf-8")
 	r.ParseForm()
 
-	//type data struct{ Counter int }
-	err := indexTemplate.ExecuteTemplate(w, "index.html", nil)
+	type data struct{ Truck1, Truck2 int }
+	err := indexTemplate.ExecuteTemplate(w, "index.html", data{TruckLoads["truck1"], TruckLoads["truck2"]})
 	if err != nil {
 		return err
 	}
@@ -112,3 +112,4 @@ func getCss(w http.ResponseWriter, r *http.Request) error {
 	fmt.Fprintln(w, file)
 	return nil
 }
+

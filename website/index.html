@@ -17,7 +17,7 @@
         <div class="body">
             <div class="truck">
                 Truck 1
-                <p id="truck1"></p>
+                <p id="truck1">{{.Truck1}}</p>
                 <script>
                     var value1 = new XMLHttpRequest();
                     value1.open( "GET", "http://10.35.64.127:8080/getValues", false );
@@ -31,7 +31,7 @@
             </div>
             <div class="truck">
                 Truck 2
-                <p id="truck2"></p>
+                <p id="truck2">{{.Truck2}}</p>
             </div>
         </div>
     </body>
