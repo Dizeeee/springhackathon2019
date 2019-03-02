@@ -1,0 +1,40 @@
+html, body {
+    background-color: #ddd;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    
+}
+
+* {
+    font: "Arial", "Helvetica", "sans-serif";
+}
+
+.head {
+    background-color: #6ad;
+    margin: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    display: flexbox;
+}
+
+.reload {
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: 0;
+    background-color: greenyellow;
+}
+
+.body {
+    margin: 8px;
+    padding: 4px;
+    
+}
+
+.truck {
+    background-color: white;
+    margin: 4px;
+    padding: 4px;
+    border-radius: 4px;
+
+}
