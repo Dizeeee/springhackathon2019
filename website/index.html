@@ -9,36 +9,23 @@
         <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     </head>
     <body>
+        <script>
+            setInterval(reload, 1000)
+            function reload() {
+                location.reload()
+            }
+        </script>
         <div class="head">
             <h1>Spring Hackathon 2019</h1>
-            <!-- <div class="reload">
-                <i class="material-icons">refresh</i>
-            </div> -->
         </div>
         <div class="body">
             <div class="truck">
                 Truck 1
-                <p id="truck1">{{.Truck1}}</p>
-                <script>
-                    var output;
-
-                    function reload() {
-                        var value1 = $.getJSON("http://10.35.64.127:8080/getValues.json");
-
-                        console.log(value1);
-                        return JSON.parse(value1).truck1;   
-                    }
-                    while(true) {
-                        output = reload();
-                        document.getElementById('truck1').innerHTML = output;
-                    }
-                    
-                    
-                </script>
+                <p id="truck1">{{.Truck1}}%</p>
             </div>
             <div class="truck">
                 Truck 2
-                <p id="truck2">{{.Truck2}}</p>
+                <p id="truck2">{{.Truck2}}%</p>
             </div>
         </div>
     </body>
