@@ -3,6 +3,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Spring Hackthon 2019</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="screen" href="main.css">
@@ -10,22 +11,28 @@
     <body>
         <div class="head">
             <h1>Spring Hackathon 2019</h1>
-            <div class="reload">
+            <!-- <div class="reload">
                 <i class="material-icons">refresh</i>
-            </div>
+            </div> -->
         </div>
         <div class="body">
             <div class="truck">
                 Truck 1
                 <p id="truck1">{{.Truck1}}</p>
                 <script>
-                    var value1 = new XMLHttpRequest();
-                    value1.open( "GET", "http://10.35.64.127:8080/getValues", false );
-                    value1 = JSON.parse(value1);
+                    var output;
 
-                    // value1 = JSON.parse('10.35.64.127:8080/getValues.json').Value[1];
-                    console.log(value1);
-                    document.getElementById('truck1').innerHTML = value1.truck1;
+                    function reload() {
+                        var value1 = $.getJSON("http://10.35.64.127:8080/getValues.json");
+
+                        console.log(value1);
+                        return JSON.parse(value1).truck1;   
+                    }
+                    while(true) {
+                        output = reload();
+                        document.getElementById('truck1').innerHTML = output;
+                    }
+                    
                     
                 </script>
             </div>
