@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Dizeeee/springhackathon2019/issues"
   },
-  "homepage": "https://github.com/Dizeeee/springhackathon2019#readme"
+  "homepage": "https://github.com/Dizeeee/springhackathon2019#readme",
+  "dependencies": {
+    "electron": "latest"
+  }
 }
